@@ -68,26 +68,40 @@ const Form = (props) => {
 
   return (
     <>
+      <div className="header">
+        <h1>Seller's Admin page</h1>
+      </div>
+      <hr />
       <form onSubmit={submitForm}>
         <div className="container">
-          <div>
+          <div className="inputProduct">
             <label>Product Id</label>
-            <input type="id" value={idInput} onChange={idHandle}></input>
+            <input
+              min="1"
+              type="number"
+              value={idInput}
+              onChange={idHandle}
+            ></input>
           </div>
-          <div>
+          <div className="inputProduct">
             <label>Selling price</label>
             <input
-              type="price"
+              type="number"
+              min="1"
               value={priceInput}
               onChange={priceHandle}
             ></input>
           </div>
-          <div>
+          <div className="inputProduct">
             <label>Product Name</label>
             <input type="name" value={nameInput} onChange={nameHandle}></input>
           </div>
-          <div>
-            <select value={productType} onChange={categoryHnadle}>
+          <div className="category_select">
+            <select
+              className="category"
+              value={productType}
+              onChange={categoryHnadle}
+            >
               <option value="Electronics" selected>
                 Electronics
               </option>
@@ -95,47 +109,71 @@ const Form = (props) => {
               <option value="Mobiles">Mobiles</option>
             </select>
           </div>
-          <div>
+          <div className="submitButton">
             <button type="submit">Add Product </button>
           </div>
         </div>
       </form>
 
-      <div>
-        <div>Electronics</div>
-
-        {elecproduct?.map((item, index) => (
-          <div>
-            <div key={item?.id}>{item?.id}</div>
-            <div>{item?.sellingPrice}</div>
-            <div>{item?.productName}</div>
-            <button onClick={() => handleDelete(item?.id)}>Delete</button>
+      <div className="itemList">
+        <div className="item">
+          <div className="elctronics">
+            <div>Electronics</div>
           </div>
-        ))}
-      </div>
-      <div>
-        <div>Food</div>
 
-        {foodItems?.map((item, index) => (
-          <div>
-            <div key={item?.id}>{item?.id}</div>
-            <div>{item?.sellingPrice}</div>
-            <div>{item?.productName}</div>
-            <button onClick={() => handleDelete(item?.id)}>Delete</button>
-          </div>
-        ))}
-      </div>
-      <div>
-        <div>Mobiles</div>
+          {elecproduct?.map((item, index) => (
+            <div>
+              <p key={item?.id}>{item?.id}</p>
+              <p>{item?.sellingPrice}</p>
+              <p>{item?.productName}</p>
+              <button
+                className="deleteButton"
+                onClick={() => handleDelete(item?.id)}
+              >
+                Delete
+              </button>
+            </div>
+          ))}
+        </div>
 
-        {mobileItems?.map((item, index) => (
-          <div>
-            <div key={item?.id}>{item?.id}</div>
-            <div>{item?.sellingPrice}</div>
-            <div>{item?.productName}</div>
-            <button onClick={() => handleDelete(item?.id)}>Delete</button>
+        <div className="item">
+          <div className="food">
+            <div>Food</div>
           </div>
-        ))}
+
+          {foodItems?.map((item, index) => (
+            <div>
+              <p key={item?.id}>{item?.id}</p>
+              <p>{item?.sellingPrice}</p>
+              <p>{item?.productName}</p>
+              <button
+                className="deleteButton"
+                onClick={() => handleDelete(item?.id)}
+              >
+                Delete
+              </button>
+            </div>
+          ))}
+        </div>
+
+        <div className="item">
+          <div className="mobiles">
+            <div>Mobiles</div>
+          </div>
+          {mobileItems?.map((item, index) => (
+            <div>
+              <p key={item?.id}>{item?.id}</p>
+              <p>{item?.sellingPrice}</p>
+              <p>{item?.productName}</p>
+              <button
+                className="deleteButton"
+                onClick={() => handleDelete(item?.id)}
+              >
+                Delete
+              </button>
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );

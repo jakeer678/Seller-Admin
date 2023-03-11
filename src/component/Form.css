@@ -2,4 +2,154 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+    background-color: #5a032e;
+    padding: 1rem;
+    margin: 2rem auto;
+    width: 70rem;
+    max-width: 95%;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.8);
+}
+.header h1 {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    color: rgb(94, 176, 248);
+}
+.elctronics {
+    display: flex;
+    justify-content: start;
+    margin-left: 2rem;
+    margin-top: 5rem;
+   width: 8rem;
+  background: #137188;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+}
+.mobiles {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+ 
+    margin-left: 2rem;
+    margin-top: 5rem;
+   width: 8rem;
+  background: #a438ec;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+ 
+  font-weight: 700;
+}
+.food {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    margin-left: 2rem;
+    margin-top: 5rem;
+   width: 8rem;
+  background: #670974;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+  font-weight: 700;
+}
+.inputProduct input {
+    font:inherit;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 10rem;
+    max-width: 100%;
+    font-weight: 700;
+    
+}
+.submitButton {
+margin-top: 1.65rem;
+}
+.submitButton button {
+    font: inherit;
+    cursor: pointer;
+    padding: 0.7rem 2rem;
+    border: 1px solid #40005d;
+    background-color:#1fe018 ;
+    color: white;
+    font-weight: 700;
+    border-radius: 12px;
+    margin-left: 0.75rem;
+}
+ p {
+    font: inherit;
+    cursor: pointer;
+    padding: 0.7rem 2rem;
+    border: 1px solid #40005d;
+    background-color:#1fe018 ;
+    color: white;
+    font-weight: 700;
+    width: 8rem;
+    border-radius: 12px;
+    margin-left: 0.75rem;
+    text-decoration: none;
+ }
+.category_select {
+    font: inherit;
+    margin-top: 2rem;
+}
+.deleteButton {
+    font: inherit;
+    cursor: pointer;
+    padding: 0.7rem 2rem;
+    border: 1px solid #40005d;
+    background-color:#ec0909 ;
+    color: white;
+    cursor: pointer;
+    border-radius: 12px;
+    margin-left: 1rem;
+} 
+.category {
+    display: flex;
+    flex-direction: row;
+    width: 7rem;
+    height: 2.5rem;
+    border: 1px solid #ececec;
+    background-color: #13017a;
+    color: white;
+    border-radius: 12px;
+  text-align: center;
+  margin-left: 1.5rem;
+    justify-content: center;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+.button:hover,
+.button:active {
+  background: #0eac0e;
+  border-color: #ac0e77;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.itemList {
+    display: flex;
+    justify-content: space-around;
+}
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: center;
 }
